@@ -387,7 +387,7 @@ exports['should resolve path to non-existant nodes to parent'] = function(test) 
     best = r.resolvePath(a, [0], generation);
 
     test.equals(best.node, undefined);
-    test.equals(best.par, a);
+    test.equals(best.parent, a);
     test.equals(best.index, -1);
     test.equals(generation.length, 0);
     test.done();
@@ -429,7 +429,7 @@ exports['should resolve path to non-existant node to nearest node and parent'] =
     best = r.resolvePath(a, [1, 0], generation);
 
     test.equals(best.node, a11);
-    test.equals(best.par, a2);
+    test.equals(best.parent, a2);
     test.equals(best.index, 0);
     test.equals(generation.length, 2);
     test.done();

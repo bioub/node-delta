@@ -19,7 +19,7 @@ function annotate_source(doc, matching, invert) {
     var excludes = [];
 
     
-    //collector.forEachChange(function(type, path, par, remove, insert) {
+    //collector.forEachChange(function(type, path, parent, remove, insert) {
     collector.forEachChange(function(op) {
         var deep = (op.type === 2),
         i, nodes, dompar, before, ancestors;

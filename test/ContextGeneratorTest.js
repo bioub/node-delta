@@ -43,7 +43,7 @@ exports['should return empty context when radius is zero'] = function(test) {
     test.done();
 };
 
-exports['if radius is 2, head should return 2 nodes up to par'] = function(test) {
+exports['if radius is 2, head should return 2 nodes up to parent'] = function(test) {
     var ctxgen = new contextdelta.ContextGenerator(2, nodeindex, valindex);
     var head = ctxgen.head(new tree.Anchor(r, b), 1);
 
@@ -52,7 +52,7 @@ exports['if radius is 2, head should return 2 nodes up to par'] = function(test)
     test.done();
 };
 
-exports['if radius is 2, tail should return 2 nodes following par in docorder'] = function(test) {
+exports['if radius is 2, tail should return 2 nodes following parent in docorder'] = function(test) {
     var ctxgen = new contextdelta.ContextGenerator(2, nodeindex, valindex);
     var tail = ctxgen.tail(new tree.Anchor(r, b), 1);
 
